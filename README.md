@@ -108,6 +108,16 @@ For available options, refer to:
 - [Supported Formats](https://docs.protecto.ai/docs/supporting-format/)
 - [Supported Entities](https://docs.protecto.ai/docs/supported-phi/)
 
+#### Mask Configuration
+
+The mask configuration allows you to specify how each column in your table should be masked. You can choose to:
+
+1. **Specify a token type only** - The system will use the specified token type to mask all data in the column
+2. **Specify a format and token type** - The system will identify data matching the specified format and mask it with the given token type
+3. **Use automatic detection** - By leaving the configuration empty `{}` or setting values to `null`, the system will automatically detect sensitive data and apply appropriate masking
+
+When configuring formats and tokens, ensure they are compatible. For example, numeric data formats (like phone numbers) work best with numeric tokens, while text-based formats (like emails or URLs) work best with text tokens.
+
 ### 4. Environment Variables
 Create a `.env` file in the root directory with these parameters:
 
