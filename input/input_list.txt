@@ -1,0 +1,2 @@
+database_name.schema_name.table_name_1
+database_name.schema_name.table_name_2
