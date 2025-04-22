@@ -17,7 +17,7 @@ TABLE_LIST_PATH = os.path.join(INPUT_DIR, 'input_list.txt')
 MASK_EXCEL_PATH = os.path.join(OUTPUT_DIR, 'mask_report.xlsx')
 MASK_TRACKING_PATH = os.path.join(BASE_DIR, 'tracking_ids.txt')
 
-MAX_COLUMNS_PER_API_CALL = 50
+MAX_COLUMNS_PER_API_CALL = 500
 
 def load_env_config():
     load_dotenv()
@@ -94,8 +94,15 @@ def create_or_append_output_excel(output_path, masked_data, table_name):
     table_excel_path = os.path.join(os.path.dirname(output_path), f"{table_name}.xlsx")
     os.makedirs(os.path.dirname(table_excel_path), exist_ok=True)
     
+
     wb = load_workbook(table_excel_path) if os.path.exists(table_excel_path) else Workbook()
-    if 'Sheet' in wb.sheetnames and len(wb.sheetnames) > 1:
+    sheet_name = "Report"
+    if sheet_name not in wb.sheetnames:
+        ws = wb.create_sheet(title=sheet_name)
+    else:
+        ws = wb[sheet_name]
+        # Now that we've created our Report sheet, remove the default Sheet if it exists
+    if 'Sheet' in wb.sheetnames:
         wb.remove(wb['Sheet'])
     
     sheet_name = "Report"
