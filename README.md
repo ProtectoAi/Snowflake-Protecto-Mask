@@ -126,7 +126,7 @@ python mask.py
 ```
 
 ### Processing Flow
-1. The script reads the table list from `tables.txt`
+1. The script reads the table list from `input_list.txt`
 2. For each table:
    - Connects to Snowflake and retrieves data in configurable chunks
    - Applies masking configuration from `mask_configuration.json`
