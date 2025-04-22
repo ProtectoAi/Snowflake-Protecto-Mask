@@ -17,7 +17,7 @@ TABLE_LIST_PATH = os.path.join(INPUT_DIR, 'input_list.txt')
 MASK_EXCEL_PATH = os.path.join(OUTPUT_DIR, 'mask_report.xlsx')
 MASK_TRACKING_PATH = os.path.join(BASE_DIR, 'tracking_ids.txt')
 
-MAX_COLUMNS_PER_API_CALL = 500
+MAX_COLUMNS_PER_API_CALL = 50
 
 def load_env_config():
     load_dotenv()
@@ -400,5 +400,5 @@ def main(base_url, table_list_file, num_rows, TABLE_CHUNK_SIZE, output_excel_pat
     
 if __name__ == '__main__':
     NUM_ROWS, TABLE_CHUNK_SIZE = load_env_config()
-    BASE_URL = "https://qa.protecto.ai/api/vault"
+    BASE_URL = "https://protecto-trial.protecto.ai/api/vault"
     main(BASE_URL, TABLE_LIST_PATH, NUM_ROWS, TABLE_CHUNK_SIZE, MASK_EXCEL_PATH, MASK_TRACKING_PATH)
