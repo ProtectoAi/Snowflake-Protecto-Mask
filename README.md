@@ -56,23 +56,23 @@ Create a `config/mask_configuration.json` file to define custom masking rules fo
 {
   "DATABASE_NAME.SCHEMA_NAME.TABLE_NAME_1": {
     "0": { 
-      "token_name": "Numeric Token"                             # Column 0: Masking with numeric token only
+      "token_name": "Numeric Token"   # Column 0: Masking with numeric token only
     },
     "1": { 
-      "token_name": "Text Token"                                # Column 1: Masking with text token only
+      "token_name": "Text Token"      # Column 1: Masking with text token only
     },
     "2": { 
-      "format": "Phone Number", 
-      "token_name": "Numeric Token"                             # Column 2: Masking phone numbers with numeric token
+      "format": "Phone Number",       # Column 2: Masking phone numbers with numeric token
+      "token_name": "Numeric Token"   
     },
     "3": { 
-      "format": "URL", 
-      "token_name": "Text Token"                                # Column 3: Masking URLs with text token
+      "format": "URL",                # Column 3: Masking URLs with text token
+      "token_name": "Text Token"      
     },
-    "4": {},                                                    # Column 4: Auto-detection of sensitive data (no format or token specified)
+    "4": {},                          # Column 4: Auto-detection of sensitive data (no format and no token specified)
     "5": { 
-      "format": null, 
-      "token_name": null                                        # Column 5: Auto-detection of sensitive data (null values)
+      "format": null,                 # Column 5: Auto-detection of sensitive data (null values)
+      "token_name": null                                        
     }
   },
   "DATABASE_NAME.SCHEMA_NAME.TABLE_NAME_2": {
