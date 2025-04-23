@@ -143,7 +143,7 @@ python mask.py
 
 ## Output
 The tool generates:
-- Excel files in the `output/` directory (one per processed table, named according to the table name in input_list.txt)
+- Excel files in the `output/` directory (one per processed table, named according to the table name in the input table)
 - A tracking log (`tracking_ids.txt`) for all processing requests
 
 ## Support
