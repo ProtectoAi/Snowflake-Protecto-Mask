@@ -1,7 +1,7 @@
 # Snowflake Protecto Mask
 
 ## Overview
-This tool connects to a Snowflake database, retrieves data from specified tables, and sends it to the Protecto Tokenization API for masking. It tracks the processing status asynchronously and saves the final masked table results into an Excel file.
+This script connects to a Snowflake database, retrieves data from specified tables, and sends it to the Protecto Tokenization API for masking. It tracks the processing status asynchronously and saves the final masked table results into an Excel file.
 
 For more details, refer to the [Protecto Tokenization API documentation](https://docs.protecto.ai/docs-category/tokenization-api/).
 
