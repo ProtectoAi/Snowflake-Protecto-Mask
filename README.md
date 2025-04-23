@@ -25,7 +25,7 @@ For more details, refer to the [Protecto Tokenization API documentation](https:/
 ## Configuration
 
 ### 1. Credentials File
-Create a `config/credentials.json` file with your Snowflake credentials and Protecto API key:
+Store your Snowflake credentials and Protecto API key in a JSON file (e.g., config/credentials.json) with the following format:
 
 ```json
 {
